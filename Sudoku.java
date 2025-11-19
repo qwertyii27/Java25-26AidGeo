@@ -14,7 +14,6 @@ public class Sudoku {
         int[][][] boardArr = new int[10][10][10]; // [row][column][box]
         for (int i = 1; i <= 9; i++) { // i is row
             int numPlace = numNum - ((i - 1) * 9); // finds if it is 1st, 2nd, 3rd, etc in the row
-            board = input.charAt(i);
             for (int n = 1; n <= 9; n++) { // n is column
                 numNum++;
                 if (numPlace >= 1 && numPlace <= 3) { // finding box number
@@ -39,12 +38,13 @@ public class Sudoku {
                     if (i <= 9 && i >= 7)
                         box = 9;
                 } else {
-                    System.err.println("error");
+                    // System.err.println("error");
                 }
-                System.out.println(i + " " + n + " " + box);
+                // System.out.println(i + " " + n + " " + box);
+                board = input.charAt(i * n - 1);
                 boardArr[i][n][box] = Integer.parseInt(String.valueOf(board));
+                System.out.print(boardArr[i][n][box] + " ");
             }
-            System.out.println(boardArr[9][9][0]);
         }
     }
 }
