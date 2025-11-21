@@ -32,5 +32,6 @@ public class StringText {
         for (int s : rows) { // another for-each loop
             System.out.println(s);
         }
+        in.close();
     }
 }
