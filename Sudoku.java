@@ -1,3 +1,5 @@
+//Note for @AidMag: This still needs work, it is also spaghetti, i'd say focus on StringTest
+
 import java.util.Scanner;
 
 public class Sudoku {
