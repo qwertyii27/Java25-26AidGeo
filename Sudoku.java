@@ -48,5 +48,6 @@ public class Sudoku {
                 System.out.print(boardArr[i][n][box] + " ");
             }
         }
+        in.close();
     }
 }
