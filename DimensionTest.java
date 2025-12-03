@@ -85,7 +85,7 @@ public class DimensionTest {
         // Everything up to now just arrays the numbers, this will now make them 2D
         int[][] grid1 = new int[9][9]; // int [row][column]
 
-        // do not mess with this IT WILL BREAK PLEAHAHAHESEEEEE!
+        // do not mess with this IT WILL BREAK!!!!
         for (int i = 0; i < 9; i++)
             grid1[0][i] = row1[i];
         for (int i = 0; i < 9; i++)
