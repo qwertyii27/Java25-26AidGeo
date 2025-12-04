@@ -1,15 +1,14 @@
-//my brain is so fried i just decided to make a second attempt....
-//explanation for solving: This time around I will try to sort the numbers before
-//checking them.
+//Summary: This project looks for a number that has the same digits as x, 2x, 3x, 4x, 5x, and 6x.
+// To complete it, we begit at 1 and sort the digits of each number from 9 to 0. If all of the
+// numbers are equal, then that is the solution.
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class Euler52_2 {
 
     // sorts a number alphanumerically from 0-9.
     private static int numberSorted(int number) {
-        // ISSUE: Parsing the integer removes 0s.
+        // ISSUE: Parsing the integer removes 0s. SOLUTION: Reverse.
         String number2 = Integer.toString(number);
         char[] sortNum = number2.toCharArray(); // yes i looked up how to do this.
         Arrays.sort(sortNum); // only way to avoid 60 extra line of code btw.
@@ -28,11 +27,10 @@ public class Euler52_2 {
 
     public static void main(String[] args) {
 
-        int x = 10000; // OG CountNumber
+        int x = 1; // OG CountNumber
         int twoX, threeX, fourX, fiveX, sixX; // self explanatory
         boolean solved = false; // also self explanatory
-        boolean twoSolved, threeSolved, fourSolved, fiveSolved, sixSolved;
-        System.out.println(numberSorted(x));
+        boolean twoSolved, threeSolved, fourSolved, fiveSolved, sixSolved; // checks if x = 2x, x = 3x, etc.
         while (!solved) {
             x++;
             twoSolved = false;
@@ -60,16 +58,14 @@ public class Euler52_2 {
             if (numberSorted(sixX) == numberSorted(x)) {
                 sixSolved = true;
             }
-            if (x > 2000000) {
-                System.out.println("Too much!");
-                break;
-            }
+
             if (twoSolved && threeSolved && fourSolved && fiveSolved && sixSolved) {
-                solved = true;
+                solved = true; // if all are the same, solution has been reached.
             }
         }
         if (solved) {
             System.out.println("Answer is " + x);
+            System.out.println(numberSorted(x)); // funny sorted version
         }
     }
 }
