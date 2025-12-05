@@ -64,8 +64,7 @@ public class Euler52_2 {
             }
         }
         if (solved) {
-            System.out.println("Answer is " + x);
-            System.out.println(numberSorted(x)); // funny sorted version
+            System.out.println(x); // funny sorted version
         }
     }
 }

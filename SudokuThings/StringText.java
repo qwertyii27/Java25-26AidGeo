@@ -1,4 +1,6 @@
+package SudokuThings;
 //By Georgio
+
 //Note to Aidan: This program showcases how we turn this grid into an array of integers. 
 //IT WORKS! HOORAY!
 

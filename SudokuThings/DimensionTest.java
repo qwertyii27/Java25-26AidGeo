@@ -1,3 +1,4 @@
+package SudokuThings;
 
 //Similar to StringText but testing multidimensional arrays.
 //Stack Overflow has been used HEAVILY, I knew almost none of this
