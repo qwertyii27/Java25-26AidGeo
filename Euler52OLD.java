@@ -1,4 +1,4 @@
-public class Euler52 {
+public class Euler52OLD {
     public static void main(String[] args) {
         // overall solve condition
         boolean solved = false;
