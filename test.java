@@ -6,5 +6,6 @@ public class test {
         char[] numbers = String.valueOf(x).toCharArray();
         Arrays.sort(numbers);
         System.out.println(numbers);
+        System.out.println("hi");
     }
 }
